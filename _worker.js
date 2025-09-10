@@ -6925,6 +6925,7 @@ function config_Html(token = "test", proxyhost = "") {
             for (let attempt = 1; attempt <= maxRetries; attempt++) {
                 try {
                     const versionUrl = backendUrl + '/version';
+					console.log("Checking backend:", versionUrl);
                     const response = await fetch(versionUrl, {
                         method: 'GET',
                         headers: {
@@ -7195,4 +7196,5 @@ function config_Html(token = "test", proxyhost = "") {
 </html>`;
 
     return html;
+
 }
